@@ -77,34 +77,33 @@
 
 
 @media (max-width: 800px) {
-  .hero-container{
-    padding-top: 50px;
-  }
-
   .hero{
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
+    padding-top: 50px;
   }
-  .hero-image-container{
+
+  .hero__image-container{
     justify-content: center;
+
   }
   .hero-image-container img{
     width: 60%;
     max-width: 250px;
   }
-  .hero-info div{
-    justify-content: center;
+  .hero__info{
+    align-items: center;
   }
 
-  .hero-info h1{
+  .hero__info h1{
     font-size: 30px;
     line-height: 45px;  
   }
 
-  .hero-info h1,
-  .hero-info p{
+  .hero__info h1,
+  .hero__info p{
     text-align: center;
   }
   .hero-glow{
