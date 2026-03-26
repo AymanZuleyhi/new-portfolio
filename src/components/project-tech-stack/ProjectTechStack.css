@@ -1,0 +1,27 @@
+.project-technology{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  opacity: 0.9;
+}
+
+.project-technology div{
+  border-radius: 7px;
+  padding: 5px 12px 5px 12px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  /* border: 1px solid rgba(250, 3, 3, 0.404); */
+}
+
+.project-technology div img{
+  width: 12px;
+  height: 12px;
+  object-fit: cover;
+  
+}
+
+.project-technology div span{
+  font-size: 14px;
+  font-weight: bold;
+}

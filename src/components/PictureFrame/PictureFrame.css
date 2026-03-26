@@ -1,0 +1,59 @@
+.picture-frame{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 180px;
+  padding-top: 5px;
+  width: 150px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.353);
+  position: absolute;
+  background-color: white;
+}
+
+.picture-frame img{
+  height: 150px;
+  width: 140px;
+  object-fit: cover;
+}
+
+.picture-frame:nth-child(1) { 
+  top: 0%; 
+  left: 5%; 
+  transform: rotate(-5deg); 
+}
+
+.picture-frame:nth-child(2) { 
+  top: 0%; 
+  right: 40%; 
+  transform: rotate(3deg); 
+  z-index: 302;
+}
+.picture-frame:nth-child(3) { 
+  top: 0%; 
+  right: 10%; 
+  transform: rotate(0deg); 
+  z-index: 303;
+  background-color: white;
+}
+
+.picture-frame:nth-child(4) { 
+  bottom: 00%; 
+  left: 20%; 
+  transform: rotate(-5deg); 
+  z-index: 304;
+  background-color: white;
+}
+
+.picture-frame:nth-child(5) { 
+  bottom: -2%; 
+  right: 20%; 
+  transform: rotate(4deg); 
+  z-index: 305;
+  background-color: white;
+}
+
+/* The "L3 Support" Hover Effect */
+.picture-frame:hover {
+  transform: rotate(0deg) scale(1.1) !important;
+  z-index: 100; /* Pulls the hovered image to the front */
+}

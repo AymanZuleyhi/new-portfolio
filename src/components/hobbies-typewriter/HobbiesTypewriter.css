@@ -1,0 +1,23 @@
+.typewritter-container{
+  height: 25px;
+  margin-top: -9px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.typewriter-cursor {
+  border-right: 2px solid #3b82f6;
+  animation: blink 0.7s infinite;
+}
+
+.typewritter-text {
+  color: black;
+  border-right: 3px solid #3b82f6;
+  padding: 0px 5px 0px 5px;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #3b82f6; }
+}

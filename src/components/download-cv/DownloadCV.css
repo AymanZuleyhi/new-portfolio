@@ -1,0 +1,28 @@
+.hero__download-cv{
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid rgb(121, 191, 235);
+  box-shadow: 0 0 10px rgba(85, 162, 209, 0.747);
+  gap: 10px;
+  padding: 0 15px;
+  border-radius: 30px;
+  color: rgb(103, 159, 193);
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.hero__download-cv.loading{
+  cursor: not-allowed;
+}
+
+.hero__download-cv:hover{
+  box-shadow: 0px 0px 10px rgb(100, 186, 239);
+}
+
+.hero__download-cv:hover{
+  color: rgb(71, 144, 189);
+  transform: translateY(-1px);
+}

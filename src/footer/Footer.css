@@ -1,0 +1,23 @@
+.footer-container{
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 90%;
+  max-width: 80rem;
+
+  border-top: 1px solid rgba(138, 138, 138, 0.199);
+}
+
+.footer p{
+  color: rgb(186, 186, 186);
+  font-weight: bold;
+}

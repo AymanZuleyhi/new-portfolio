@@ -1,0 +1,117 @@
+*{
+  font-family: "Inter";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Define a global spacing variable for consistency */
+  --section-padding: clamp(6rem, 10vh, 8rem);
+  --slope-height: -37px;
+  --angle-height: 150px;
+  
+  /* Section padding */
+  --section-padding: 80px;
+  --section-padding-xl: 200px;
+
+  --p-color: rgb(73, 73, 73);
+}
+
+img{
+  object-fit: cover;
+}
+
+a{
+  font-size: 14px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+section{
+  /* padding: 60px 0px; */
+  margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  section{
+    /* padding: 20px; */
+  }
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;      /* Internet Explorer/Edge */
+  user-select: none;          /* Standard syntax */
+}
+
+h1{
+  color: white;
+}
+
+h2{
+  font-size: 30px;
+}
+
+span,
+p{
+  font-size: 15px;
+}
+
+p{
+  color: var(--p-color);
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+
+/* 1. Set the total width of the scrollbar area */
+::-webkit-scrollbar {
+  width: 12px; /* Slightly wider to make room for the "gap" */
+}
+
+/* 2. Style the track (the background) */
+::-webkit-scrollbar-track {
+  background: rgb(36, 36, 36); /* Or match your site background */
+}
+
+/* 3. Style the thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #676767;    /* The color of the bar */
+  border-radius: 20px;       /* Rounded ends */
+  
+  /* THE TRICK: */
+  border: 2px solid transparent; /* This creates the "space" */
+  background-clip: padding-box;  /* This keeps the color inside the border */
+}
+
+/* 4. Optional: change color on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Change the white background to match your input's dark color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  /* Replace #1a1a1a with your actual input background color */
+  -webkit-box-shadow: 0 0 0px 1000px rgb(30, 34, 39) inset !important;
+  
+  /* This changes the text color of the autofilled text */
+  -webkit-text-fill-color: white !important;
+  
+  /* Ensures the transition doesn't "flicker" white for a millisecond */
+  transition: background-color 5000s ease-in-out 0s;
+}

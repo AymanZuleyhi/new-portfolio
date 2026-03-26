@@ -1,0 +1,108 @@
+/* 1. The new wrapper for just the input and icon */
+.input-field-group {
+  position: relative;
+  display: flex; /* Helps ensure the input takes up full width */
+}
+
+/* 2. Update the SVG anchor to look at the group, not the whole container */
+.input-field-group svg {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(86, 160, 209);
+  pointer-events: none;
+}
+
+/* 3. Keep your validation logic, just update the selector path */
+.input-field-group .input:invalid[focused="true"] {
+  border: 2px solid rgb(122, 7, 7);
+}
+
+/* Target the error message which is now a sibling of the GROUP */
+.input-field-group:has(.input:invalid[focused="true"]) ~ .error-message {
+  display: block;
+}
+
+/* Alternatively, if you don't want to use :has() for browser compatibility: */
+.input:invalid[focused="true"] ~ .error-message {
+  display: block;
+}
+
+/* 1. Base style for all icons - hidden by default */
+.icon-success, .icon-error {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none; 
+  pointer-events: none;
+}
+
+
+
+/* 2. Show Success Icon only when input is valid AND focused */
+.input:valid[focused="true"] ~ .icon-success {
+  display: block;
+  color:  rgb(86, 160, 209);; /* Green */
+}
+
+/* 3. Show Error Icon only when input is invalid AND focused */
+.input:invalid[focused="true"] ~ .icon-error {
+  display: block;
+  color: rgb(122, 7, 7); /* Red to match your border */
+}
+
+/* 4. Ensure icons don't overlap if both conditions are somehow met */
+.input:invalid[focused="true"] ~ .icon-success {
+  display: none;
+}
+/* Note: For the above line to work, the error message must be a 
+   DIRECT sibling of the input. If it's outside the group, 
+   use the :has() selector above! */
+
+
+.input{
+  height: 45px;
+  border-radius: 10px;
+  border: none;
+  padding-left: 8px;
+  background-color: rgba(57, 57, 57, 0.414);
+  color: white;
+  border: 2px solid transparent;
+  transition: 0.2s ease;
+}
+
+.input-container label{
+  color: white;
+}
+
+.input:focus{
+  outline: none;
+  border: 2px solid rgb(101, 182, 233);
+}
+
+.input-container{
+  position: relative;
+}
+
+.input-container svg{
+  position: absolute;
+  right: 10px;
+  color: rgb(86, 160, 209);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.error-message{
+  color: red !important;
+  display: none;
+}
+
+.input-container input:invalid[focused="true"] ~ .error-message{
+  display: block;
+}
+
+.input-container input:invalid[focused="true"]{
+  border: 2px solid rgb(122, 7, 7);
+}
