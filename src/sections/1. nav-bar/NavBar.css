@@ -30,5 +30,7 @@
   height: 100%;
   width: 90%;
   max-width: 80rem;
+
+  border: 1px solid red;
 }
 
