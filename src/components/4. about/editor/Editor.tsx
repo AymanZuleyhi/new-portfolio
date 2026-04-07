@@ -18,7 +18,7 @@ export default function Editor() {
             <div className="line-number">
               <span>{i + 1}</span>
             </div>
-            <p className="line-text">{item}</p>
+            <div className="line-text">{item}</div>
           </div>
         )})}
     </div>

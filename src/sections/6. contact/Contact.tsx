@@ -109,7 +109,11 @@ export default function Contact(props: ContactType) {
       const result = await response.json();
       return result;
     } catch (error) {
-      console.error(error.message);
+      if(error instanceof Error) {
+        console.error(error.message)
+      } else {
+        console.error("An unexpected error occured.");
+      }
     }
   };
 
@@ -162,9 +166,9 @@ export default function Contact(props: ContactType) {
       <Net />
 
       <div className="floating-icons">
-        {icons.map((icon) => (
+        {icons.map((icon, i: number) => (
           <img
-            key={icon.id}
+            key={i}
             src={icon.src}
             alt="floating-element"
             className="img"
