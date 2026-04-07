@@ -2,6 +2,7 @@ import "./Project.css";
 import Video from "../video/Video";
 import ProjectTechStack from "../project-tech-stack/ProjectTechStack";
 import NavigationButton from "../navigation-button/NavigationButton";
+import { useViewport } from "../../../context/ViewportContext";
 
 type ProjectType = {
   video: string,
@@ -23,12 +24,19 @@ type ProjectType = {
   }
 }
 
-export default function Project({ project, index }) {
+type Project = {
+  project: ProjectType,
+  index: number
+}
+
+export default function Project({ project, index }: Project) {
   const { video, logo, h1, description, technologies, styles, urls } = project;
 
+  const { width } = useViewport();
+  
   return (
     <div className={`project ${index % 2 === 0 ? "left" : "right"}`}>
-      {index % 2 === 0 && <Video video={video} />}
+      {(index % 2 === 0 || width <= 1000) && <Video video={video} />}
 
       <div className="project__information">
         <div className="project__headline">
@@ -56,7 +64,7 @@ export default function Project({ project, index }) {
         </div>
       </div>
 
-      {index % 2 !== 0 && <Video video={video} />}
+      {(index % 2 !== 0 && width >= 1000) && <Video video={video} />}
     </div>
   )
 }
