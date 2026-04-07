@@ -1,0 +1,58 @@
+.traffic-lights{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7px;
+}
+
+.traffic-lights div{
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: 1px solid;
+}
+
+.traffic-lights div:hover{
+  transform: scale(1.2);
+}
+
+.traffic-lights.L div{
+  height: 15px;
+  width: 15px;
+}
+
+.traffic-lights div:nth-of-type(1) {
+  background-color: rgb(252, 86, 84);
+  border-color: rgb(224, 70, 69);
+}
+.traffic-lights div:nth-of-type(1) svg{
+  color: rgb(127, 5, 7);
+}
+
+.traffic-lights div:nth-of-type(2) {
+  background-color: rgb(253, 188, 63);
+  border-color: rgb(224, 158, 56);
+}
+
+.traffic-lights div:nth-of-type(2) {
+  color: rgb(150, 89, 12);
+}
+
+.traffic-lights div:nth-of-type(3) {
+  background-color: rgb(56, 200, 77);
+  border-color: rgb(43, 170, 51);
+}
+
+.traffic-lights div:nth-of-type(3) {
+  border-color: rgb(39, 170, 53);
+}
+
+.traffic-lights div svg{
+  font-size: 50%;
+}

@@ -1,0 +1,29 @@
+.hamburger-menu{
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.hamburger-menu:hover{
+  background-color: rgb(85, 161, 209);
+  box-shadow: 0 0 10px rgba(85, 162, 209, 0.747);
+}
+
+/* SVG */
+/* 1. Default */
+.hamburger-menu svg{
+  color: white;
+}
+
+/* 2. Not in the Hero or Contact sections */
+.nav-bar-container.not-header .hamburger-menu svg {
+  color: black;
+}

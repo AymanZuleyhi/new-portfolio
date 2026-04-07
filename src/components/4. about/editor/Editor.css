@@ -1,0 +1,38 @@
+.line-numbers {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  background-color: #f1f3f5;
+  color: #adb5bd; 
+  user-select: none; 
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.line-row {
+  display: grid;
+  grid-template-columns: 40px 1fr; 
+  width: 100%;
+}
+
+.line-number {
+  display: flex;
+  grid-column: 1;
+  text-align: right;
+  padding-right: 12px;
+  color: #adb5bd;
+  font-family: monospace;
+  align-self: start; 
+  border-right: 1px solid #dee2e6;
+  padding-left: 12px;
+  height: 100%;
+  background-color: rgba(235, 235, 235, 0.51);
+}
+
+.line-text {
+  grid-column: 2;
+  padding-left: 12px;
+  white-space: normal; 
+  word-wrap: break-word;
+  color: var(--p-color);
+}

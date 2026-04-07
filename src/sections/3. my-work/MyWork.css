@@ -1,0 +1,67 @@
+#my-work-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 200;
+  overflow: visible; 
+  background-color: transparent;
+  padding: var(--section-padding) 0 var(--section-padding) 0;
+}
+
+#my-work-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: skewY(-5.6deg);
+  transform-origin: top left;
+  z-index: -1;
+}
+
+.my-work{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+  gap: 40px;
+  max-width: 80rem;
+  z-index: 3;
+}
+
+@media (max-width: 1000px) {
+  .my-work {
+    max-width: 90%;
+  }
+}
+
+.projects{
+  display: grid;
+  gap: 20px;
+}
+
+.my-work h3{
+  color: black;
+}
+
+
+
+.grid-cell span{
+  height: 20px;
+}
+
+/* Randomly color some cells or do it on hover */
+.grid-cell:hover {
+  /* background-color: #00ff00; Neon highlight on hover */
+}
+
+.my-work h2{
+  color: black;
+}
+.my-work p{
+  color: rgb(0, 0, 0);
+}
+

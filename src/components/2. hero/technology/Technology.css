@@ -1,0 +1,77 @@
+.technology {
+  position: relative; 
+  border: 1px solid rgba(131, 203, 255, 0.223);
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background-color: rgba(91, 159, 207, 0.041);
+}
+
+.technology img{  
+  width: 40px;
+  max-width: 40%;
+  height: 40px;  
+  max-height: 40%;
+  flex-shrink: 0;
+  min-width: 100%;  
+  object-fit: contain;
+}
+
+.technology__tooltip {
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-family: 'Inter', sans-serif;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+
+.technology__tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  border-width: 6px;
+  border-style: solid;
+  border-color: #1a1a1a transparent transparent transparent;
+}
+
+/* --- HOVER STATES --- */
+.technology:hover {
+  background-color: rgba(91, 159, 207, 0.13);
+  border: 1px solid rgba(131, 203, 255, 0.384);
+}
+
+.technology:hover .technology__tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.technology:hover img {
+  transform: scale(1.2);
+}
+
+@media (max-width: 900px) {
+  .technology {
+    height: 40px;
+    width: 40px;
+  }
+}

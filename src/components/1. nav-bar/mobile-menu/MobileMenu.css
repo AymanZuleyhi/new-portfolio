@@ -1,0 +1,40 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0; 
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  z-index: 999;  
+  transform: translateX(100%);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  background-color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background color */
+.nav-bar-container.stillHero .mobile-menu{
+  background: black;
+}
+
+.nav-bar-container.not-header .mobile-menu{
+  background: white;
+}
+
+.mobile-menu.show {
+  transform: translateX(0);
+}
+
+.mobile-menu ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.mobile-menu li{
+  font-size: 30px;
+}

@@ -1,0 +1,23 @@
+.currency-employed{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+
+  background-color: rgba(135, 135, 135, 0.068);
+  border-radius: 30px;
+  padding: 7px 14px 7px 14px;
+  width: 280px;
+}
+
+.currency-employed span{
+  font-size: 14px;
+  color: rgb(78, 145, 193);
+}
+
+.currency-employed span span{
+  font-weight: bold;
+}
+.currency-employed img{
+  width: 20px;
+}

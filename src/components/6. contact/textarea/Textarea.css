@@ -1,0 +1,38 @@
+.textarea{
+  height: 150px;
+  border-radius: 10px;
+  border: none;
+  padding: 13px 8px 13px 8px;
+  background-color: rgba(59, 59, 59, 0.414);
+  color: white;
+  resize: none;
+  border: 2px solid transparent;
+}
+
+.textarea-container p{
+  display: flex;
+  text-align: flex-end;
+  justify-content: flex-end;
+  color: rgb(102, 101, 101);
+}
+
+.textarea-container label{
+  color: white;
+}
+.textarea:focus{
+  outline: none;
+  border: 2px solid rgb(101, 182, 233);
+}
+
+.textarea-error-message{
+  color: red !important;
+  display: none;
+}
+
+.textarea-container textarea:invalid[data-focused="true"] ~ .textarea-error-message{
+  display: block;
+}
+
+.textarea-container textarea:invalid[data-focused="true"]{
+  border: 2px solid rgb(122, 7, 7);
+}

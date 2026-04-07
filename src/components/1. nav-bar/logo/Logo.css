@@ -1,0 +1,29 @@
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2px;
+  z-index: 1000;
+}
+
+/* Text */
+.logo span {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Change the color of the logo to black. */
+.nav-bar-container.not-header .logo span{
+  color: rgb(22, 22, 22);
+}
+
+/* Light */
+.logo__light{
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  transition: 0.5s ease;
+  background: linear-gradient(rgb(155, 207, 239), rgb(82, 121, 145));
+}
