@@ -18,7 +18,7 @@ import BackToTop from "./components/7. general/back-to-top/BackToTop";
 // Context
 import { useImagePreview } from "./context/ImagePreviewContext";
 
-function App() {
+export default function App() {
   const { showImagePreview } = useImagePreview();
 
   const [showToast, setShowToast] = useState(false);
@@ -53,5 +53,3 @@ function App() {
     </div>
   )
 }
-
-export default App
