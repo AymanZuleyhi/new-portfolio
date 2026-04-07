@@ -90,7 +90,7 @@
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
-    /* padding-top: 15%; */
+    padding-top: 20%;
   }
 
   .hero__info{
