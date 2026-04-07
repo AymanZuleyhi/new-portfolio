@@ -56,6 +56,13 @@
   color: rgb(201, 200, 200);
 }
 
+/* Technologies */
+.hero__technologies{
+  width: 100%;
+  grid-template-columns: (8, 1fr);
+  justify-content: flex-start;
+}
+
 /* The hero image. */
 .hero__image-container{
   display: flex;
@@ -86,7 +93,6 @@
 
   .hero__info{
     align-items: center;
-    border: 1px solid red;
   }
 
   .hero__info h1{
@@ -99,6 +105,12 @@
     text-align: center;
   }
 
+  /* Technologies */
+  .hero__technologies{
+    justify-content: center;
+  }
+
+  /* Image */
   .hero__image-container{
     justify-content: center;
   }

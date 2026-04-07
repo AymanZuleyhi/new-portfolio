@@ -1,8 +1,9 @@
 .technology {
   position: relative; 
   border: 1px solid rgba(131, 203, 255, 0.223);
-  height: 45px;
-  width: 45px;
+  max-height: 45px;
+  width: 100%;
+  max-width: 45px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -12,9 +13,6 @@
 }
 
 .technology img{  
-  width: 40px;
-  max-width: 40%;
-  height: 40px;  
   max-height: 40%;
   flex-shrink: 0;
   min-width: 100%;  
@@ -67,11 +65,4 @@
 
 .technology:hover img {
   transform: scale(1.2);
-}
-
-@media (max-width: 900px) {
-  .technology {
-    height: 40px;
-    width: 40px;
-  }
 }

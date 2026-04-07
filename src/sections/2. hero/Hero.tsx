@@ -34,13 +34,13 @@ export default function Hero() {
             <p>I build everything from Chrome Extentions to Shopify apps, to full-stack applications. Currently working as a customer support agent.</p>
           </div>
           
-          {/* <div className="hero__technologies">
+          <div className="hero__technologies">
             {formattedListOfTechnologies.map((technology: TechnologyType, i: number) => {
               return (
                 <Technology key={i} technology={technology} />
               )})
             }
-          </div> */}
+          </div>
 
           <div>
             <Button text="Contact" height={40}/>
