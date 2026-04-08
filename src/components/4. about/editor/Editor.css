@@ -1,3 +1,28 @@
+.editor-viewport{
+  opacity: 0;
+  transform: translateX(-100px); 
+  
+  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), 
+              transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  
+  will-change: transform, opacity;
+}
+
+.editor-viewport.show{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 880px) {
+  .editor-viewport{
+    transform: translateY(40px);
+  }
+
+  .editor-viewport.show {
+    transform: translateY(0);
+  }
+}
+
 .line-numbers {
   display: flex;
   flex-direction: column;
@@ -27,6 +52,13 @@
   padding-left: 12px;
   height: 100%;
   background-color: rgba(235, 235, 235, 0.51);
+}
+
+.line-row:nth-of-type(1) span,
+.line-row:nth-of-type(3) span,
+.line-row:nth-of-type(4) span{
+  color: var(--main-color);
+  font-weight: bold;
 }
 
 .line-text {

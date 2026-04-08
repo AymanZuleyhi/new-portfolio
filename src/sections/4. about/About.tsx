@@ -10,7 +10,7 @@ export default function About() {
     <section id="about-section" className="about-container">
 
       <div className="about">
-        <h2>Who's this guy? 🤔</h2>
+        <h2 className="reveal">Who's this guy? 🤔</h2>
 
         <div className="about__content">
           <Editor />

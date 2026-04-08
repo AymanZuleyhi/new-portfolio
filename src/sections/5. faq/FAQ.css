@@ -35,4 +35,17 @@
   gap: 40px;
   max-width: 80rem;
   z-index: 3;
+
+  opacity: 0;
+  transform: translateY(100px); 
+  
+  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), 
+              transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  
+  will-change: transform, opacity;
+}
+
+.faq.show{
+  opacity: 1;
+  transform: translateY(0);
 }

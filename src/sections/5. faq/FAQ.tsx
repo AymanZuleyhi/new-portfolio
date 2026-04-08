@@ -90,7 +90,7 @@ export default function FAQ() {
   return (
     <section id="faq-section" className="faq-container">
       <div className="faq">
-        <h2>FAQs</h2>
+        <h2 className="faq__headline">FAQs</h2>
 
         <div className="faqs">
           {questions.map((q, i) => {

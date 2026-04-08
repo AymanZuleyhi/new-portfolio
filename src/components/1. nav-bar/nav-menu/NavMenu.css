@@ -36,7 +36,7 @@
 }
 
 .nav-bar-container li.active{
-  color: rgb(255, 255, 255);
+  color: white;
 }
 
 .nav-bar-container li:hover{

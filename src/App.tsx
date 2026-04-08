@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 // Sections
 import NavBar from "./sections/1. nav-bar/NavBar";
@@ -26,6 +26,32 @@ export default function App() {
   const handleShowToast = () => {
     setShowToast(!showToast);
   };
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          // Stop observing once the animation has played
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const classes = [".reveal", ".editor-viewport", ".about__images", ".faq__headline", ".faq"];
+
+    // 1. Join the array into a single selector string: ".reveal, .editor-viewport"
+    const selector = classes.join(", ");
+
+    // 2. Select all elements matching ANY of those classes and observe them
+    document.querySelectorAll(selector).forEach(element => {
+      observer.observe(element);
+    });
+  }, [])
 
   return (
     <div className="app">

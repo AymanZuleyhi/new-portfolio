@@ -186,9 +186,9 @@ export default function Contact(props: ContactType) {
       </div>
     
       <div className="contact-body">
-        <h2>{"Get in touch ✉️"}</h2>
+        <h2 className="reveal">{"Get in touch ✉️"}</h2>
 
-        <form key={formVersion} onSubmit={handleSubmit} ref={formRef}>
+        <form className="reveal" key={formVersion} onSubmit={handleSubmit} ref={formRef}>
           {input.map((input) => {
             if(input.name === "name" || input.name === "email") {
               return (

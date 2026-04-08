@@ -9,7 +9,7 @@
   border-radius: 30px;
   cursor: pointer;
   transition: 0.3s ease;
-  background-color: rgb(85, 161, 209);
+  background-color: var(--main-color);
   color: rgb(11, 17, 28);
   font-weight: bold;
   box-shadow: 0 0 10px rgba(85, 162, 209, 0.747);
