@@ -31,7 +31,7 @@ export default function Hero() {
 
           <div className="hero__headline">
             <h1>Hi, I'm Ayman! <span className="wave-icon">👋</span> <br/> Full-Stack Web Developer</h1>
-            <p>I build everything from Chrome Extentions to Shopify apps, to full-stack applications. Currently working as a customer support agent.</p>
+            <p>I build everything from Chrome Extentions to Shopify apps, to full-stack applications.</p>
           </div>
           
           <div className="hero__technologies">
